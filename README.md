@@ -24,9 +24,6 @@ Este projeto fornece uma listagem em CSV com dados socioeconômicos, acessíveis
 - Adicionar e excluir registros
 - Filtrar dados
 
-## Demonstração da Aplicação
-![Demonstração](link-para-a-sua-imagem-de-demonstração)
-
 ## Pré-requisitos e como rodar a aplicação/testes
 1. **Instalar o Python**:
    Você pode baixar o Python [aqui](https://www.python.org/downloads/).
