@@ -1,0 +1,89 @@
+ID,Nome,Idade,Gênero,Renda Mensal,Nível de Escolaridade,Ocupação,Categoria que precisa de melhora,Número de Dependentes,Tempo de Residência,Acesso à Internet,Data do Registro
+1,Dra. Clara Pastor,49,Feminino,1215.3,Ensino Médio,Garçom,Habitação,4,2,Sim,11/09/2024
+2,Sra. Vitória Nascimento,47,Feminino,1495.68,Ensino Médio,Enfermeiro,Educação,0,18,Sim,15/09/2024
+3,Manuela Marques,60,Feminino,945.52,Ensino Fundamental,Garçom,Habitação,1,2,Não,10/09/2024
+4,Srta. Marcela Vieira,18,Feminino,2273.63,Ensino Médio,Vendedor,Educação,3,16,Sim,10/09/2024
+5,Luiz Gustavo Martins,34,Masculino,1602.62,Ensino Fundamental,Pedreiro,Transporte,0,2,Não,15/09/2024
+6,Mariana Machado,44,Masculino,2484.27,Ensino Fundamental,Operador de Caixa,Saúde,3,15,Sim,17/09/2024
+7,Augusto da Cunha,53,Feminino,981.3,Ensino Fundamental,Açougueiro,Transporte,0,15,Sim,12/09/2024
+8,Esther Sampaio,64,Feminino,1407.61,Ensino Médio,Assistente Administrativo,Educação,3,7,Não,08/09/2024
+9,Rael Sampaio,35,Feminino,1589.19,Ensino Médio,Operador de Caixa,Educação,3,11,Não,16/09/2024
+10,Henry Gabriel Câmara,26,Feminino,825.68,Ensino Fundamental,Operador de Caixa,Saúde,2,15,Não,03/09/2024
+11,Camila Gomes,19,Masculino,1827.61,Ensino Fundamental,Auxiliar de Limpeza,Infraestrutura,2,11,Sim,04/09/2024
+12,Jade Camargo,45,Feminino,2153.85,Ensino Médio,Enfermeiro,Transporte,3,15,Não,10/09/2024
+13,Allana Mendes,61,Masculino,2145.3,Ensino Médio,Vendedor,Transporte,4,11,Não,08/09/2024
+14,Maya Duarte,18,Masculino,1463.98,Ensino Médio,Auxiliar de Limpeza,Educação,4,18,Sim,10/09/2024
+15,Davi Luiz Leão,43,Feminino,968.84,Ensino Fundamental,Servente,Infraestrutura,4,19,Sim,07/09/2024
+16,Rhavi Rios,34,Feminino,912.18,Ensino Médio,Motorista,Habitação,1,16,Sim,08/09/2024
+17,Dr. Igor Mendonça,53,Feminino,1364.45,Ensino Médio,Pedreiro,Educação,3,2,Sim,14/09/2024
+18,Vitor Hugo Farias,62,Masculino,1871.61,Ensino Médio,Auxiliar de Limpeza,Educação,1,17,Não,17/09/2024
+21,Clara Ferreira,33,Masculino,1405.82,Ensino Médio,Açougueiro,Infraestrutura,4,1,Sim,15/09/2024
+22,Marcelo Pastor,47,Masculino,2416.71,Ensino Médio,Operador de Caixa,Habitação,2,12,Sim,06/09/2024
+23,Carolina Sousa,44,Feminino,1919.36,Ensino Médio,Vendedor,Alimentação,3,4,Não,16/09/2024
+24,Juliana Lopes,34,Masculino,1046.65,Ensino Fundamental,Pedreiro,Saúde,4,13,Sim,14/09/2024
+25,Maria Laura Machado,32,Masculino,1301.77,Ensino Médio,Pedreiro,Habitação,0,16,Não,18/09/2024
+26,André Barros,32,Masculino,1926.55,Ensino Fundamental,Assistente Administrativo,Saúde,2,7,Sim,13/09/2024
+27,Júlia Pimenta,45,Feminino,2037.82,Ensino Fundamental,Assistente Administrativo,Infraestrutura,4,18,Não,05/09/2024
+28,Davi Miguel Fogaça,49,Feminino,2499.93,Ensino Fundamental,Servente,Infraestrutura,1,15,Sim,10/09/2024
+29,Guilherme Peixoto,19,Masculino,865.07,Ensino Médio,Vendedor,Transporte,1,5,Sim,15/09/2024
+30,Sr. Miguel Novaes,65,Feminino,1425.4,Ensino Médio,Açougueiro,Habitação,1,18,Sim,13/09/2024
+31,Sr. Ravy Vieira,61,Feminino,1444.28,Ensino Médio,Servente,Saúde,4,19,Não,08/09/2024
+32,Dante Leão,41,Feminino,1539.69,Ensino Fundamental,Assistente Administrativo,Saúde,3,20,Não,14/09/2024
+33,Daniela Porto,28,Masculino,1569.14,Ensino Médio,Assistente Administrativo,Transporte,0,11,Não,14/09/2024
+34,Juliana Viana,42,Masculino,1332.81,Ensino Médio,Operador de Caixa,Alimentação,1,7,Não,17/09/2024
+35,Maria Fernanda Rios,62,Feminino,1500.7,Ensino Médio,Açougueiro,Habitação,4,11,Sim,05/09/2024
+36,Luiz Fernando da Cunha,22,Feminino,1582.02,Ensino Fundamental,Enfermeiro,Habitação,1,10,Não,04/09/2024
+37,Dra. Marcela Costela,35,Masculino,2238.86,Ensino Médio,Servente,Alimentação,2,5,Sim,04/09/2024
+38,Isabella Sá,26,Masculino,2025.52,Ensino Médio,Auxiliar de Limpeza,Infraestrutura,2,5,Não,08/09/2024
+39,Sr. Henry Vasconcelos,52,Feminino,1461.55,Ensino Fundamental,Vendedor,Educação,4,13,Não,06/09/2024
+40,Pietro da Paz,42,Feminino,862.0,Ensino Médio,Auxiliar de Limpeza,Infraestrutura,3,2,Sim,18/09/2024
+41,Bryan Silva,46,Masculino,1516.3,Ensino Fundamental,Garçom,Educação,4,9,Sim,06/09/2024
+42,Sr. Otto Carvalho,43,Feminino,1123.84,Ensino Médio,Açougueiro,Educação,4,1,Não,04/09/2024
+43,Benício da Rocha,19,Feminino,1708.93,Ensino Médio,Açougueiro,Infraestrutura,3,6,Sim,07/09/2024
+44,Luiz Otávio Lima,51,Masculino,1370.23,Ensino Médio,Enfermeiro,Saúde,2,10,Sim,17/09/2024
+45,Isabel Moreira,54,Masculino,2138.92,Ensino Médio,Operador de Caixa,Infraestrutura,2,3,Sim,09/09/2024
+46,Eloah Azevedo,50,Feminino,1846.59,Ensino Fundamental,Garçom,Educação,1,14,Sim,15/09/2024
+47,Eloah Barros,45,Masculino,1754.19,Ensino Fundamental,Enfermeiro,Saúde,4,5,Sim,05/09/2024
+48,Sr. Juan Lima,57,Masculino,924.82,Ensino Médio,Vendedor,Habitação,1,6,Não,17/09/2024
+49,Bruno Viana,55,Masculino,2097.44,Ensino Fundamental,Garçom,Saúde,2,6,Não,17/09/2024
+50,Luísa Aparecida,47,Feminino,1484.13,Ensino Médio,Assistente Administrativo,Infraestrutura,1,13,Não,16/09/2024
+51,Bianca Nascimento,57,Feminino,1563.76,Ensino Médio,Operador de Caixa,Alimentação,1,10,Não,09/09/2024
+52,Heloísa Santos,44,Feminino,1048.68,Ensino Fundamental,Vendedor,Alimentação,1,15,Sim,09/09/2024
+53,Sra. Maria Liz Nascimento,44,Masculino,2173.57,Ensino Fundamental,Pedreiro,Infraestrutura,0,2,Sim,13/09/2024
+54,Evelyn Sá,23,Masculino,1516.09,Ensino Médio,Pedreiro,Infraestrutura,3,19,Não,05/09/2024
+55,Luiz Otávio Garcia,55,Masculino,2047.21,Ensino Médio,Servente,Alimentação,0,2,Sim,04/09/2024
+56,Josué Caldeira,58,Feminino,1088.07,Ensino Médio,Operador de Caixa,Transporte,3,6,Sim,14/09/2024
+57,Giovanna Andrade,35,Feminino,1894.57,Ensino Médio,Açougueiro,Saúde,4,6,Não,17/09/2024
+58,Benicio Andrade,33,Feminino,1266.1,Ensino Médio,Garçom,Saúde,2,11,Não,04/09/2024
+59,Bruno Pereira,18,Feminino,1047.93,Ensino Fundamental,Vendedor,Saúde,1,15,Sim,18/09/2024
+60,Ísis Cavalcanti,31,Masculino,1827.73,Ensino Médio,Vendedor,Infraestrutura,4,11,Não,12/09/2024
+61,Maria Eduarda Sales,22,Feminino,876.89,Ensino Médio,Servente,Infraestrutura,3,15,Não,07/09/2024
+62,Antonella da Rocha,44,Feminino,987.28,Ensino Médio,Assistente Administrativo,Habitação,4,8,Não,07/09/2024
+63,Lorenzo Alves,50,Feminino,1195.03,Ensino Médio,Enfermeiro,Educação,2,7,Não,10/09/2024
+64,Davi Lucas Alves,63,Masculino,1264.98,Ensino Fundamental,Motorista,Educação,3,14,Não,17/09/2024
+65,Bianca Moreira,29,Masculino,1322.31,Ensino Fundamental,Operador de Caixa,Educação,1,7,Sim,08/09/2024
+66,Sabrina Souza,43,Masculino,1097.0,Ensino Fundamental,Pedreiro,Infraestrutura,2,13,Sim,07/09/2024
+67,Matheus da Luz,35,Masculino,1221.92,Ensino Médio,Motorista,Educação,3,18,Não,14/09/2024
+68,Maria Laura das Neves,59,Masculino,2051.24,Ensino Médio,Açougueiro,Habitação,4,2,Não,15/09/2024
+69,Manuella Jesus,54,Feminino,2290.21,Ensino Fundamental,Assistente Administrativo,Alimentação,2,3,Sim,03/09/2024
+70,José Miguel Câmara,26,Masculino,872.18,Ensino Fundamental,Vendedor,Habitação,2,15,Sim,10/09/2024
+71,Maria Júlia Freitas,64,Feminino,2268.82,Ensino Médio,Enfermeiro,Saúde,3,19,Sim,08/09/2024
+72,Calebe Moreira,57,Feminino,1866.78,Ensino Fundamental,Servente,Saúde,3,5,Sim,09/09/2024
+73,Sr. Ryan Sá,23,Feminino,2441.95,Ensino Fundamental,Enfermeiro,Alimentação,1,7,Não,14/09/2024
+74,Thomas Mendonça,60,Feminino,1423.69,Ensino Médio,Enfermeiro,Alimentação,2,15,Sim,17/09/2024
+75,Mariana Ferreira,19,Feminino,2306.14,Ensino Fundamental,Enfermeiro,Alimentação,3,16,Sim,10/09/2024
+76,Brenda das Neves,44,Masculino,2198.07,Ensino Médio,Açougueiro,Saúde,0,1,Não,08/09/2024
+77,Fernando Silva,56,Masculino,1360.31,Ensino Fundamental,Vendedor,Alimentação,4,18,Sim,04/09/2024
+78,Sra. Amanda Casa Grande,23,Feminino,1822.49,Ensino Médio,Açougueiro,Educação,2,6,Não,11/09/2024
+79,Mateus Vieira,18,Feminino,887.68,Ensino Fundamental,Assistente Administrativo,Infraestrutura,4,8,Sim,18/09/2024
+81,Rodrigo Vargas,62,Masculino,1063.96,Ensino Médio,Açougueiro,Transporte,2,18,Sim,12/09/2024
+82,Catarina Dias,30,Masculino,1015.88,Ensino Médio,Auxiliar de Limpeza,Transporte,1,13,Não,10/09/2024
+83,Thales Caldeira,56,Feminino,1055.68,Ensino Médio,Operador de Caixa,Habitação,4,3,Sim,16/09/2024
+84,Dr. Marcelo Machado,53,Masculino,1175.9,Ensino Fundamental,Garçom,Alimentação,1,12,Não,08/09/2024
+85,Rafaela Câmara,25,Masculino,2145.89,Ensino Médio,Auxiliar de Limpeza,Saúde,2,12,Não,13/09/2024
+86,Carolina Albuquerque,46,Feminino,1399.01,Ensino Fundamental,Assistente Administrativo,Educação,0,12,Não,18/09/2024
+87,Dra. Rafaela Cardoso,57,Masculino,1747.83,Ensino Médio,Assistente Administrativo,Educação,1,18,Não,05/09/2024
+88,Augusto Albuquerque,23,Feminino,1602.04,Ensino Fundamental,Enfermeiro,Habitação,1,20,Sim,08/09/2024
+89,Yuri Rezende,25,Feminino,2398.26,Ensino Fundamental,Garçom,Saúde,2,16,Não,11/09/2024
+90,Roberta da Silva,36,Feminino,1600.0,Ensino Fundamental,Aposentado,Saúde,2,10,Sim,2024-09-23
+91,Mateus Gonçalves,46,Masculino,4600.0,Pós-graduação,Eletricista,Segurança,2,46,Sim,2024-09-23

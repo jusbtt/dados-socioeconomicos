@@ -1,0 +1,210 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Dados Socioeconômicos</title>
+    <link rel="stylesheet" href="../static/style.css">
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+</head>
+
+<body>
+    <h1>
+        Dados Socioeconômicos
+        <div class="theme-container">
+            <button id="theme-toggle" class="small-theme-button">
+                <img src="../static/dia-e-noite.png" alt="Trocar Tema" style="width: 20px; height: 20px;">
+            </button>
+        </div>
+    </h1>
+    <div class="total-registros">
+        Total de Registros: {{ total }}
+    </div>
+
+    <div class="button-container">
+        <button id="openModal">Adicionar Registro</button>
+        <button id="openChart">Ver Gráfico</button>
+        <button id="openFilter">Filtrar</button>
+        <form action="/resetar" method="post" style="display:inline;">
+            <button type="submit" class="reset-button">
+                <img src="../static/arrows-rotate-solid.svg" alt="Resetar" style="width: 20px; height: 20px;">
+            </button>
+        </form>
+    </div>
+
+    <div id="myModal" class="modal">
+        <div class="modal-content">
+            <span class="close">&times;</span>
+            <h2>Adicionar Registro</h2>
+            <form action="/adicionar" method="post">
+                <label for="nome">Nome:</label><br>
+                <input type="text" id="nome" name="nome" required placeholder="Digite seu nome"><br>
+                <label for="idade">Idade:</label><br>
+                <input type="number" id="idade" name="idade" required placeholder="Digite sua idade"><br>
+                <label for="genero">Gênero:</label><br>
+                <select id="genero" name="genero" required>
+                    <option value="Masculino">Masculino</option>
+                    <option value="Feminino">Feminino</option>
+                    <option value="Outro">Outro</option>
+                </select><br>
+                <label for="renda">Renda Mensal:</label><br>
+                <input type="text" id="renda" name="renda" required placeholder="R$"><br>
+                <label for="escolaridade">Nível de Escolaridade:</label><br>
+                <select id="escolaridade" name="escolaridade" required>
+                    <option value="Ensino Fundamental">Ensino Fundamental</option>
+                    <option value="Ensino Médio">Ensino Médio</option>
+                    <option value="Ensino Superior">Ensino Superior</option>
+                    <option value="Pós-Graduação">Pós-Graduação</option>
+                </select><br>
+                <label for="ocupacao">Ocupação:</label><br>
+                <input type="text" id="ocupacao" name="ocupacao" required placeholder="Digite sua ocupação"><br>
+                <label for="categoria">Categoria que precisa de melhora:</label><br>
+                <select id="categoria" name="categoria" required>
+                    <option value="Saúde">Saúde</option>
+                    <option value="Educação">Educação</option>
+                    <option value="Transporte">Transporte</option>
+                    <option value="Segurança">Segurança</option>
+                    <option value="Infraestrutura">Infraestrutura</option>
+                </select><br>
+                <label for="dependentes">Número de Dependentes:</label><br>
+                <input type="number" id="dependentes" name="dependentes" required placeholder="Digite a quantidade de depentendes"><br>
+                <label for="tempo">Tempo de Residência:</label><br>
+                <input type="text" id="tempo" name="tempo" required placeholder="Digite o tempo de residência"><br>
+                <label for="internet">Acesso à Internet:</label><br>
+                <select id="internet" name="internet" required>
+                    <option value="Sim">Sim</option>
+                    <option value="Não">Não</option>
+                </select><br>
+                <label for="data">Data do Registro:</label><br>
+                <input type="date" id="data" name="data" required><br><br>
+                <button type="submit">Adicionar</button>
+            </form>
+        </div>
+    </div>
+
+    <div id="chartModal" class="modal">
+        <div class="modal-content">
+            <span class="close">&times;</span>
+            <h2>Gráfico de Categorias</h2>
+            <img src="../static/grafico.png" alt="Gráfico de Categorias">
+        </div>
+    </div>
+    <div id="filterModal" class="modal">
+        <div class="modal-content">
+            <span class="close">&times;</span>
+            <h2>Filtrar Registros</h2>
+            <form action="/filtrar" method="post">
+                <label for="categoria">Categoria:</label><br>
+                <select id="categoria" name="categoria">
+                    <option value="">Todas</option>
+                    <option value="Saúde">Saúde</option>
+                    <option value="Educação">Educação</option>
+                    <option value="Transporte">Transporte</option>
+                    <option value="Segurança">Segurança</option>
+                    <option value="Infraestrutura">Infraestrutura</option>
+                </select><br><br>
+
+                <label for="faixa_etaria">Faixa Etária:</label><br>
+                <select id="faixa_etaria" name="faixa_etaria">
+                    <option value="">Todas</option>
+                    <option value="0-17">0-17 anos</option>
+                    <option value="18-30">18-30 anos</option>
+                    <option value="31-50">31-50 anos</option>
+                    <option value="51+">51 anos ou mais</option>
+                </select><br><br>
+
+                <label for="faixa_salario">Faixa de Salário:</label><br>
+                <select id="faixa_salario" name="faixa_salario">
+                    <option value="">Todas</option>
+                    <option value="0-1500">Até R$1500</option>
+                    <option value="1501-3000">R$1501 a R$3000</option>
+                    <option value="3001-4500">R$3001 a R$4500</option>
+                    <option value="4501+">Acima de R$4500</option>
+                </select><br><br>
+
+                <label for="escolaridade">Escolaridade:</label><br>
+                <select id="escolaridade" name="escolaridade">
+                    <option value="">Todas</option>
+                    <option value="Ensino Fundamental">Ensino Fundamental</option>
+                    <option value="Ensino Médio">Ensino Médio</option>
+                    <option value="Ensino Superior">Ensino Superior</option>
+                    <option value="Pós-Graduação">Pós-Graduação</option>
+                </select><br>
+                <button type="submit">Filtrar</button>
+            </form>
+        </div>
+    </div>
+    <table>
+        <tr>
+            <th>Ação</th>
+            <th>Nome</th>
+            <th>Idade</th>
+            <th>Gênero</th>
+            <th>Renda Mensal</th>
+            <th>Nível de Escolaridade</th>
+            <th>Ocupação</th>
+            <th>Categoria que precisa de melhora</th>
+            <th>Número de Dependentes</th>
+            <th>Tempo de Residência</th>
+            <th>Acesso à Internet</th>
+            <th>Data do Registro</th>
+        </tr>
+        {% for registro in dados %}
+        <tr>
+            <td>
+                <form action="/excluir/{{ registro.ID }}" method="post" style="display:inline;">
+                    <button type="submit">Excluir</button>
+                </form>
+            </td>
+            <td>{{ registro.Nome }}</td>
+            <td>{{ registro.Idade }}</td>
+            <td>{{ registro.Gênero }}</td>
+            <td>{{ registro['Renda Mensal'] }}</td>
+            <td>{{ registro['Nível de Escolaridade'] }}</td>
+            <td>{{ registro.Ocupação }}</td>
+            <td>{{ registro['Categoria que precisa de melhora'] }}</td>
+            <td>{{ registro['Número de Dependentes'] }}</td>
+            <td>{{ registro['Tempo de Residência'] }}</td>
+            <td>{{ registro['Acesso à Internet'] }}</td>
+            <td>{{ registro['Data do Registro'] }}</td>
+        </tr>
+        {% endfor %}
+    </table>
+
+    <script>
+        $(document).ready(function () {
+            $("#openModal").click(function () {
+                $("#myModal").show();
+            });
+            $("#openChart").click(function () {
+                $("#chartModal").show();
+            });
+            $("#openFilter").click(function () {
+                $("#filterModal").show();
+            });
+            $(".close").click(function () {
+                $(".modal").hide();
+            });
+            $(window).click(function (event) {
+                if ($(event.target).hasClass('modal')) {
+                    $(".modal").hide();
+                }
+            });
+        });
+        const themeToggleButton = document.getElementById('theme-toggle');
+        const currentTheme = localStorage.getItem('theme');
+
+        if (currentTheme === 'dark') {
+            document.body.classList.add('dark');
+        }
+
+        themeToggleButton.addEventListener('click', () => {
+            document.body.classList.toggle('dark');
+            const newTheme = document.body.classList.contains('dark') ? 'dark' : 'light';
+            localStorage.setItem('theme', newTheme);
+        });
+    </script>
+</body>
+
+</html>

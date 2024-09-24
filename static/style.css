@@ -1,0 +1,265 @@
+body {
+    font-family: 'Helvetica Neue', Arial, sans-serif;
+    background-color: #e7ecf1; /* Fundo azul pastel */
+    margin: 0;
+    padding: 20px;
+}
+
+h1 {
+    text-align: center; /* Centraliza o texto do título */
+    color: #004080; /* Azul mais escuro */
+    margin-bottom: 30px;
+    font-size: 2.2em; /* Diminuído o tamanho */
+    letter-spacing: 1px;
+    position: relative; /* Permite posicionamento absoluto para o botão */
+}
+
+.theme-container {
+    position: absolute; /* Permite mover o botão em relação ao h1 */
+    right: 20px; /* Espaço da borda direita */
+    top: 50%; /* Centraliza verticalmente em relação ao h1 */
+    transform: translateY(-50%); /* Ajusta para centralizar exatamente */
+}
+
+.total-registros {
+    font-size: 1.3em; /* Diminuído o tamanho da fonte */
+    font-weight: bold;
+    color: #004080; /* Azul mais escuro */
+    margin: 20px auto;
+    text-align: center;
+    padding: 10px; /* Diminuindo o padding */
+    border-radius: 8px;
+    background-color: #7fbde7; /* Azul pastel mais suave */
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+}
+
+body.dark .total-registros {
+    background-color: #333; /* Fundo escuro para modo escuro */
+    color: #fff; /* Texto claro */
+}
+
+.button-container {
+    text-align: center;
+    display: flex; /* Usar flexbox para alinhamento horizontal */
+    justify-content: center; /* Centraliza os botões na linha */
+    align-items: center; /* Alinha verticalmente */
+}
+
+button {
+    padding: 10px 15px; /* Ajustar o tamanho dos botões */
+    margin: 5px;
+    border: none;
+    border-radius: 5px;
+    background-color: #7fbde7; /* Azul pastel */
+    color: white;
+    font-size: 0.9em; /* Tamanho da fonte ajustado */
+    cursor: pointer;
+    transition: background-color 0.3s, transform 0.3s;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+}
+
+button:hover {
+    background-color: #348be7; /* Azul pastel mais escuro */
+    transform: translateY(-2px);
+}
+
+.reset-button {
+    height: 2.3rem; /* Altura do botão */
+    width: 3rem; /* Largura do botão */
+    background-color: #7fbde7; /* Azul pastel moderno */
+    border: none; /* Remove borda */
+    border-radius: 5px; /* Bordas arredondadas */
+    display: flex; /* Usar flexbox para centralizar o conteúdo */
+    justify-content: center; /* Centraliza horizontalmente */
+    align-items: center; /* Centraliza verticalmente */
+    cursor: pointer; /* Mão ao passar o mouse */
+}
+
+.reset-button:hover {
+    background-color: #348be7; /* Amarelo mais escuro no hover */
+}
+
+.modal {
+    min-height: 300px; /* Ajusta a altura mínima do modal */
+    display: none; /* Ocultar o modal por padrão */
+    position: fixed; /* Permite que o modal fique fixo na tela */
+    z-index: 1; /* Coloca o modal sobre outros elementos */
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    overflow: auto; /* Permite rolagem se necessário */
+    background-color: rgba(0, 0, 0, 0.6); /* Fundo escurecido */
+    padding-top: 60px; /* Espaçamento do topo */
+}
+
+.modal-content {
+    background-color: #ffffff;
+    margin: 5% auto;
+    padding: 20px;
+    border: 1px solid #888;
+    width: 90%; /* Aumenta um pouco a largura */
+    max-width: 500px; /* Largura máxima para evitar scroll */
+    border-radius: 12px;
+    box-shadow: 0 8px 25px rgba(0, 0, 0, 0.2);
+}
+
+.modal-content input[type="text"],
+.modal-content input[type="number"],
+.modal-content select,
+.modal-content input[type="date"] {
+    width: 100%; /* Largura total do modal */
+    padding: 10px; /* Padding para conforto */
+    margin-bottom: 15px; /* Espaçamento entre inputs */
+    border: 1px solid #ccc; /* Borda suave */
+    border-radius: 5px; /* Bordas arredondadas */
+    height: 40px; /* Altura consistente */
+    box-sizing: border-box; /* Inclui padding e border na largura total */
+}
+
+#filterModal .modal-content {
+    max-height: 480px; /* Definindo altura máxima igual para consistência */
+}
+
+/* Estilos para a imagem do gráfico */
+#chartModal .modal-content img {
+    max-width: 100%; /* Garante que a imagem não exceda a largura do modal */
+    height: auto; /* Mantém a proporção da imagem */
+    display: block; /* Garante que a imagem seja um bloco */
+    margin: 0 auto; /* Centraliza a imagem */
+    width: 90%; /* Aumenta um pouco a largura da imagem */
+}
+
+/* Títulos nos modais no modo escuro */
+body.dark .modal-content h2 {
+    color: #ffffff; /* Cor do título em branco */
+}
+
+.modal-content {
+    background-color: #ffffff;
+    margin: 5% auto;
+    padding: 20px;
+    border: 1px solid #888;
+    width: 90%; /* Largura total do modal */
+    max-width: 500px; /* Largura máxima para evitar scroll */
+    border-radius: 12px;
+    box-shadow: 0 8px 25px rgba(0, 0, 0, 0.2);
+    max-height: 480px; /* Altura máxima do modal */
+    overflow-y: auto; /* Permite scroll se necessário */
+}
+
+.modal-content button {
+    width: 100%; /* Botão ocupa toda a largura */
+    padding: 10px; /* Padding para conforto */
+    border: none; /* Sem borda */
+    border-radius: 5px; /* Bordas arredondadas */
+    background-color: #4a90e2; /* Cor de fundo do botão */
+    color: white; /* Cor do texto */
+    font-size: 1em; /* Tamanho da fonte */
+    cursor: pointer; /* Cursor de pointer para botão */
+    transition: background-color 0.3s; /* Transição suave */
+}
+
+.modal-content img {
+    max-width: 100%; /* Garante que a imagem não exceda a largura do modal */
+    height: auto; /* Mantém a proporção da imagem */
+    display: block; /* Garante que a imagem seja um bloco */
+    margin: 0 auto; /* Centraliza a imagem */
+}
+
+.modal-content button:hover {
+    background-color: #3c7cbf; /* Cor do botão ao passar o mouse */
+}
+
+.close {
+    color: #aaa; /* Cor do botão de fechar */
+    float: right; /* Alinha à direita */
+    font-size: 28px; /* Tamanho do botão de fechar */
+    font-weight: bold; /* Negrito */
+}
+
+.close:hover,
+.close:focus {
+    color: black; /* Cor do hover */
+    text-decoration: none; /* Remove sublinhado */
+    cursor: pointer; /* Mão ao passar o mouse */
+}
+
+body.dark {
+    background-color: #121212; /* Cor de fundo escuro */
+    color: white; /* Texto em branco */
+}
+
+body.dark h1 {
+    color: #4a90e2; /* Azul claro para o título */
+}
+
+body.dark .total-registros {
+    background-color: #333; /* Fundo escuro */
+    color: #fff; /* Texto claro */
+}
+
+body.dark button {
+    background-color: #4a90e2; /* Azul para botão no tema escuro */
+}
+
+body.dark button:hover {
+    background-color: #3c7cbf; /* Azul mais escuro */
+}
+
+/* Estilos para a tabela */
+table {
+    width: 100%;
+    border-collapse: collapse;
+    margin-top: 20px;
+}
+
+th, td {
+    padding: 12px;
+    text-align: left;
+    border-bottom: 1px solid #ddd;
+}
+
+th {
+    background-color: #85C1FF; /* Azul pastel para cabeçalho */
+    color: #fff;
+}
+
+tr {
+    transition: background-color 0.3s; /* Transição suave */
+}
+
+tr:hover {
+    background-color: #b3e1ff; /* Azul pastel claro ao passar o mouse */
+}
+
+body.dark th {
+    background-color: #3a3a3a; /* Cabeçalho escuro */
+    color: #fff; /* Texto claro no cabeçalho */
+}
+
+body.dark td {
+    background-color: #2a2a2a; /* Células escuras */
+    color: #ddd; /* Texto mais claro para melhor visibilidade */
+}
+
+body.dark tr:hover {
+    background-color: #444; /* Cor de fundo escura para linha em hover */
+}
+
+body.dark .modal-content h2 {
+    color: #ffffff; /* Cor do título em branco */
+}
+
+/* Estilo do botão de tema */
+.small-theme-button {
+    width: 5rem; /* Largura do botão */
+    height: 2rem; /* Altura do botão */
+    border-radius: 5px;
+    display: flex; /* Usar flexbox para centralizar o conteúdo */
+    justify-content: center; /* Centraliza horizontalmente */
+    align-items: center; /* Centraliza verticalmente */
+    background-color: #7fbde7; /* Fundo transparente, se necessário */
+    border: none; /* Remove borda */
+    cursor: pointer; /* Mão ao passar o mouse */
+}
