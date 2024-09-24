@@ -4,6 +4,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="icon" href="../static/armazenamento-de-banco-de-dados.png">
     <title>Dados Socioeconômicos</title>
     <link rel="stylesheet" href="../static/style.css">
     <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
@@ -68,7 +69,8 @@
                     <option value="Infraestrutura">Infraestrutura</option>
                 </select><br>
                 <label for="dependentes">Número de Dependentes:</label><br>
-                <input type="number" id="dependentes" name="dependentes" required placeholder="Digite a quantidade de depentendes"><br>
+                <input type="number" id="dependentes" name="dependentes" required
+                    placeholder="Digite a quantidade de depentendes"><br>
                 <label for="tempo">Tempo de Residência:</label><br>
                 <input type="text" id="tempo" name="tempo" required placeholder="Digite o tempo de residência"><br>
                 <label for="internet">Acesso à Internet:</label><br>
@@ -178,7 +180,7 @@
                 $("#myModal").show();
             });
             $("#openChart").click(function () {
-                $("#chartModal").show();
+                $("#chartModal").show(); 
             });
             $("#openFilter").click(function () {
                 $("#filterModal").show();
