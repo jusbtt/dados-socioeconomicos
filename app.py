@@ -2,6 +2,8 @@ from flask import Flask, render_template, request, redirect
 import pandas as pd
 import matplotlib.pyplot as plt
 import os
+import matplotlib
+matplotlib.use('Agg')
 
 app = Flask(__name__)
 
@@ -16,6 +18,7 @@ def index():
     dados_ordenados = dados.sort_values(by='Nome')
     dados_ordenados['Renda Mensal'] = dados_ordenados['Renda Mensal'].apply(lambda x: f'R$ {str(x).replace(".", ",")}')
     total_registros = len(dados_ordenados)
+    grafico_categorias()  
     return render_template('index.html', dados=dados_ordenados.to_dict(orient='records'), total=total_registros)
 
 @app.route('/excluir/<int:id>', methods=['POST'])
@@ -48,19 +51,24 @@ def adicionar():
     dados.to_csv(data_file, index=False)
     return redirect('/')
 
-@app.route('/grafico')
-def grafico_categorias(dados):
+@app.route('/open_chart', methods=['POST'])
+def open_chart():
+    grafico_categorias() 
+    return redirect('/') 
+
+def grafico_categorias(dados=None):
+    if dados is None:
+        dados = load_data()
+    
     conteagem_categorias = dados['Categoria que precisa de melhora'].value_counts()
     
     plt.figure(figsize=(8, 6))
     plt.pie(conteagem_categorias, labels=conteagem_categorias.index, autopct='%1.1f%%', startangle=90)
-    plt.axis('equal')  # Para garantir que o gráfico seja um círculo
+    plt.axis('equal') 
     plt.title('Distribuição das Categorias que Precisam de Melhora')
     
     plt.savefig(os.path.join('static', 'grafico.png'))
     plt.close()
-    
-    return redirect('/')
 
 @app.route('/filtrar', methods=['POST'])
 def filtrar():
@@ -68,8 +76,6 @@ def filtrar():
     faixa_etaria = request.form.get('faixa_etaria')
     faixa_salario = request.form.get('faixa_salario')
     escolaridade = request.form.get('escolaridade')
-
-    # Lógica para filtrar os dados
     dados_filtrados = load_data()
 
     if categoria and categoria != "":
@@ -86,7 +92,6 @@ def filtrar():
             dados_filtrados = dados_filtrados[dados_filtrados['Idade'] > 50]
 
     if faixa_salario and faixa_salario != "":
-        # Converter 'Renda Mensal' para float para comparação
         dados_filtrados['Renda Mensal'] = dados_filtrados['Renda Mensal'].astype(float)
 
         if faixa_salario == '0-1500':
@@ -101,7 +106,6 @@ def filtrar():
     if escolaridade and escolaridade != "":
         dados_filtrados = dados_filtrados[dados_filtrados['Nível de Escolaridade'] == escolaridade]
 
-    # Gerar gráfico com os dados filtrados
     grafico_categorias(dados_filtrados)
 
     total = dados_filtrados.shape[0]
@@ -109,6 +113,7 @@ def filtrar():
 
 @app.route('/resetar', methods=['POST'])
 def resetar():
+    grafico_categorias()
     return redirect('/')
 
 if __name__ == '__main__':
